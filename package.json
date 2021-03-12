@@ -1,0 +1,22 @@
+{
+  "name": "@diegovera/test-package",
+  "version": "1.0.0",
+  "description": "test-package",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoVeraSarricolea/test-package.git"
+  },
+  "keywords": [
+    "diemax3019"
+  ],
+  "author": "diego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoVeraSarricolea/test-package/issues"
+  },
+  "homepage": "https://github.com/DiegoVeraSarricolea/test-package#readme"
+}
