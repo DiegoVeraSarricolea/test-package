@@ -3,8 +3,46 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1"
+  },
   "scripts": {
-    "test": "exit 0"
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf dist",
+    "prepare-build": "npm run clean && NODE_ENV=production babel lib --out-dir dist --extensions ' .js' --ignore 'lib/**/*.text.js'",
+    "copy": "cp package.json dist/ && cp README.md dist/",
+    "build": "npm run prepare-build && npm run copy"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "repository": {
     "type": "git",
@@ -16,4 +54,5 @@
     "url": "https://github.com/DiegoVeraSarricolea/test-package/issues"
   },
   "homepage": "https://github.com/DiegoVeraSarricolea/test-package#readme"
+
 }
